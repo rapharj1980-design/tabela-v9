@@ -1,0 +1,102 @@
+
+
+#listaNav {
+    list-style-type: none;
+}
+    .card-aviso {
+        background-color: #fff3cd; /* Amarelo alerta */
+        color: #856404;           /* Texto contrastante */
+        border-left: 5px solid #ffeeba; 
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+        font-weight: 500;
+        /* Destaque visual extra */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .card-aviso strong {
+        color: #533f03;
+        text-transform: uppercase;
+    }
+    footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.footer-info {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo do Botão que ativa o Tooltip */
+.tooltip-trigger {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.tooltip-trigger:hover {
+    background: #00a884; /* Cor verde WhatsApp ao passar o mouse */
+}
+
+/* O Balão (Tooltip) */
+.tooltip-box {
+    position: absolute;
+    bottom: 140%; /* Posiciona acima */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 280px;
+    background: white;
+    color: #333;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+    
+    /* Escondido por padrão */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip-box strong { color: #00a884; display: block; margin-bottom: 5px; }
+.tooltip-box p { margin: 0; }
+.tooltip-box ul { list-style: none; padding: 0; margin: 5px 0 0 0; }
+.tooltip-box hr { border: 0; border-top: 1px solid #eee; margin: 10px 0; }
+
+/* Seta do balão */
+.seta {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: white;
+}
+
+/* Mostrar ao passar o mouse ou focar (teclado) */
+.footer-info:hover .tooltip-box,
+.tooltip-trigger:focus + .tooltip-box {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 400px) {
+    .tooltip-box {
+        width: 240px;
+        font-size: 13px;
+    }
+}
+
+

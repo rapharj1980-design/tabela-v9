@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ 
+ <!-- Home: Página principal do site -->
+ <url>
+  <loc>https://mcell.digital/</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+ </url>
+
+ <!-- Categoria: Baterias iPhone -->
+ <url>
+  <loc>https://mcell.digital/menubatip.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+ </url>
+
+ <!-- Produtos: Baterias -->
+ <url>
+  <loc>https://mcell.digital/batgen.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://mcell.digital/batDeji.html</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+ </url>
+
+ <!-- Categoria: Menu de Telas -->
+ <url>
+  <loc>https://mcell.digital/menutelas.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+ </url>
+
+ <!-- Páginas de Marcas/Peças específicas -->
+ <url>
+  <loc>https://mcell.digital/telassam.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://mcell.digital/telaxiaomi.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://mcell.digital/tabetelamoto.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://mcell.digital/telaip.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://mcell.digital/tampaIphone.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+ </url>
+ <url>
+  <loc>https://mcell.digital/tablets.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+ </url>
+
+</urlset>

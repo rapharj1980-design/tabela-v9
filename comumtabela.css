@@ -1,0 +1,333 @@
+.modelog {
+    width: 100%;
+    /* table-layout: fixed; */
+    border-collapse: collapse;
+}
+
+#listaNav {
+    list-style-type: none;
+}
+
+/* CORREÇÃO W3C: Adicionada a unidade de medida correta */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2ee599 0%, #9e5ae2 100%);
+    min-height: 100vh;
+    /* PROPORÇÃO ÁUREA: Padding externo do corpo do site (~42px) */
+    padding: 2.618rem;
+    font-size: 16px;
+}
+
+/* ============================================
+         ESCALA TIPOGRÁFICA ÁUREA (REM)
+         ============================================ */
+p {
+    font-size: 1rem;
+    line-height: 1.618;
+    /* Entrelinha áurea */
+}
+
+h6 {
+    font-size: 1.05rem;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+/* ============================================
+         ESTILOS DO HEADER
+         ============================================ */
+header {
+    text-align: center;
+    /* PROPORÇÃO ÁUREA: Distância do cabeçalho para o conteúdo (~42px) */
+    margin-bottom: 2.618rem;
+    animation: slideDown 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+header h1 {
+    color: rgb(109, 57, 57);
+    font-size: 4.23rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* ============================================
+         ESTILOS DO CONTAINER PRINCIPAL
+         ============================================ */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* PROPORÇÃO ÁUREA: Espaçamento vertical entre blocos e divs (~26px) */
+    gap: 1.618rem;
+}
+
+section {
+    width: 100%;
+    max-width: 900px;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+    /* PROPORÇÃO ÁUREA: Margem inferior caso haja seções sequenciais (~42px) */
+    margin-bottom: 2.618rem;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+         ESTILOS DA TABELA
+         ============================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(220, 190, 190);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: rgb(39, 25, 25);
+}
+
+thead th {
+    /* PROPORÇÃO ÁUREA: Padding interno do cabeçalho da tabela (~42px) */
+    padding: 2.618rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+         ESTILOS DAS LINHAS DA TABELA
+         ============================================ */
+.produto-row {
+    display: table-row;
+    border-bottom: 1px solid #a77272;
+    cursor: pointer;
+    will-change: transform, background-color;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.produto-row:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.02);
+}
+
+.produto-row:last-child {
+    border-bottom: none;
+}
+
+.produto-row td {
+    /* PROPORÇÃO ÁUREA: Padding vertical (~16px) e horizontal (~26px) */
+    padding: 1rem 1.618rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #333;
+}
+
+.produto-row td:first-child {
+    color: #303c71;
+    font-weight: bold;
+    min-width: 200px;
+    transition: color 0.3s ease;
+}
+
+.produto-row td:last-child {
+    color: #0d582d;
+    font-weight: 900;
+    text-align: right;
+}
+
+/* ============================================
+         EFEITO HIGHLIGHT
+         ============================================ */
+.produto-row.highlight {
+    background: linear-gradient(90deg, #667eea15 0%, #764ba215 100%);
+    box-shadow: inset 0 0 10px rgba(102, 126, 234, 0.2);
+    transform: scale(1.03);
+}
+
+.produto-row.highlight td:first-child {
+    color: #667eea;
+    text-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* ============================================
+         ESTILOS DO LINK RETORNAR
+         ============================================ */
+a[href] {
+    display: inline-block;
+    /* PROPORÇÃO ÁUREA: Padding do botão proporcional (~10px vertical e ~26px horizontal) */
+    padding: 0.618rem 1.618rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    /* PROPORÇÃO ÁUREA: Margem superior externa (~16px) */
+    margin-top: 1rem;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a[href]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+a[href]:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+         ESTILOS DOS LINKS CONECTOR (DESTAQUE)
+         ============================================ */
+main a.conector {
+    display: inline-block;
+    /* PROPORÇÃO ÁUREA: Padding ampliado de forma harmônica (~16px vertical e ~42px horizontal) */
+    padding: 1rem 2.618rem;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* PROPORÇÃO ÁUREA: Margem externa dos botões principais (~10px) */
+    margin: 0.618rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease;
+}
+
+main a.conector:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow:
+        0 15px 40px rgba(255, 107, 107, 0.7),
+        0 0 30px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #ff5252 0%, #e63946 100%);
+    border-color: white;
+}
+
+/* ============================================
+         ANIMAÇÕES
+         ============================================ */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+         RESPONSIVIDADE MOBILE (Escala Áurea Reduzida)
+         ============================================ */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Reduz a base, recalculando automaticamente todas as proporções rem */
+        padding: 1.618rem;
+        /* Reduz o padding das bordas da tela no mobile */
+    }
+
+    header {
+        margin-bottom: 1.618rem;
+    }
+
+    main {
+        gap: 1rem;
+    }
+
+    section {
+        margin-bottom: 1.618rem;
+    }
+
+    header h1 {
+        font-size: 2.61rem;
+    }
+
+    thead th {
+        padding: 1.618rem;
+    }
+
+    .produto-row td {
+        /* Padding reduzido no mobile de forma áurea */
+        padding: 0.618rem 1rem;
+    }
+}
+
+/* ============================================
+         CLASSES DE TABELA COM IMAGEM DE BACKGROUND
+         ============================================ */
+.hard_oled_prime {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('hard_oled_prime.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tela_kbs {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('tela_kbs.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.com_chave {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('com_chave.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tela_soft_oled {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('tela_soft_oled.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tabela-cheia {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('bat_gen.jpeg');
+    background-size: cover;
+    background-position: center;
+}

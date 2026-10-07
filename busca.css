@@ -1,0 +1,187 @@
+/* ===== BUSCA MCELL ===== usa as mesmas cores do comumtabela.css */
+
+/* Lupa flutuante (todas as páginas) */
+#mb-lupa {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 900;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
+}
+#mb-lupa:hover { transform: scale(1.08); }
+#mb-lupa:focus-visible,
+#mb-painel button:focus-visible,
+#mb-painel select:focus-visible,
+#mb-painel input:focus-visible,
+#mb-painel a.mb-item:focus-visible,
+#mb-inline input:focus-visible {
+  outline: 3px solid #ff6b6b;
+  outline-offset: 2px;
+}
+
+/* Barra de busca dentro do index */
+#mb-inline {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 1.618rem;
+  max-width: 900px;
+}
+#mb-inline input {
+  width: 100%;
+  padding: 1rem 1.618rem;
+  font-size: 1.1rem;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Janela da busca */
+#mb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4vh 12px;
+  background: rgba(30, 20, 50, 0.65);
+}
+#mb-overlay[hidden] { display: none; }
+
+#mb-painel {
+  width: 100%;
+  max-width: 720px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgb(240, 225, 225);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mb-topo { display: flex; gap: 0.5rem; }
+#mb-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  border: 2px solid #667eea;
+  border-radius: 25px;
+  background: #fff;
+  color: #333;
+}
+#mb-fechar {
+  width: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: #764ba2;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#mb-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.mb-chip {
+  padding: 0.4rem 0.9rem;
+  border: 2px solid #667eea;
+  border-radius: 20px;
+  background: #fff;
+  color: #303c71;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.mb-chip[aria-pressed="true"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+#mb-tabela {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  background: #fff;
+  color: #303c71;
+}
+
+#mb-status { font-size: 0.9rem; color: #533f03; min-height: 1.2em; }
+
+#mb-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+/* Resultado: precisa vencer a regra global a[href] do comumtabela.css */
+#mb-painel a.mb-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  background: #fff;
+  color: #303c71;
+  text-align: left;
+  font-weight: 700;
+  box-shadow: none;
+  border-left: 5px solid #667eea;
+  transition: background-color 0.2s ease;
+}
+#mb-painel a.mb-item:hover,
+#mb-painel a.mb-item.mb-primeiro {
+  background: #f1efff;
+  transform: none;
+  box-shadow: none;
+}
+.mb-nome { display: block; }
+.mb-onde {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #555;
+}
+.mb-preco {
+  flex: none;
+  color: #0d582d;
+  font-weight: 900;
+  font-size: 1.05rem;
+}
+
+/* Linha destacada na página de destino */
+.produto-row.mb-destaque td {
+  background: #fff3cd;
+  animation: mbPulso 1s ease 3;
+}
+.produto-row.mb-destaque td:first-child { box-shadow: inset 6px 0 0 #ff6b6b; }
+@keyframes mbPulso {
+  50% { background: #ffe08a; }
+}
+
+@media (max-width: 600px) {
+  #mb-lupa { width: 46px; height: 46px; top: 8px; right: 8px; }
+  #mb-overlay { padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .produto-row.mb-destaque td { animation: none; }
+}
